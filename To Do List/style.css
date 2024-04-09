@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost/Jost-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost';
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #4F5D75;
+    padding: 10px;
+}
+
+.to-do {
+    width: 100%;
+    max-width: 540px;
+    /* height: 540px; */
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.to-do h2 {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  
+}
+
+i{
+    color: #ff5945;
+}
+
+.row {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+img{
+    width: 31px;
+    padding-left: 10px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 29px;
+    width: 29px;
+    background-image: url(images/uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    transition: all 0.2s ease;
+    background-image: url(images/check.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
